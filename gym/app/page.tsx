@@ -6,8 +6,8 @@ import Programs from "./components/Programs";
 import Trainers from "./components/Trainers";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
-import CTA from "./components/Cta";
 import Footer from "./components/Footer";
+import CTA from "./components/Cta";
 
 export default function Home() {
   return (
