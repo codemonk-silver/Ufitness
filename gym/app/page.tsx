@@ -7,7 +7,7 @@ import Trainers from "./components/Trainers";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-import CTA from "./components/Cta";
+import CTAS from "./components/CTAS";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <Trainers />
       <Pricing />
       <Testimonials />
-      <CTA />
+      <CTAS />
       <Footer />
     </main>
   );

@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 
-export default function CTA() {
+export default function CTAS() {
   return (
     <section className="py-24 section-padding max-w-7xl mx-auto">
       <motion.div
