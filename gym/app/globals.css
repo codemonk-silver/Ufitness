@@ -1,0 +1,210 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+/* Theme configuration using @theme directive (Tailwind v4) */
+@theme {
+  /* Colors */
+  --color-primary: #FF2E2E;
+  --color-accent: #A3FF12;
+  --color-background: #0F0F0F;
+  --color-foreground: #F5F5F5;
+  --color-steel: #1C1C1C;
+  
+  /* Font families */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-bebas), system-ui, sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0F0F0F;
+    color: #F5F5F5;
+  }
+  
+  ::selection {
+    background-color: #FF2E2E;
+    color: white;
+  }
+}
+
+/* Component classes */
+@layer components {
+  .glass-card {
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #FF2E2E, #A3FF12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-btn {
+    background: linear-gradient(to right, #FF2E2E, #ff6b6b);
+    transition: all 0.3s;
+  }
+  
+  .gradient-btn:hover {
+    background: linear-gradient(to right, #ff4545, #ff8585);
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(255, 46, 46, 0.25);
+  }
+  
+  .accent-btn {
+    background-color: #A3FF12;
+    color: #0F0F0F;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+  
+  .accent-btn:hover {
+    background-color: #b8ff4d;
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(163, 255, 18, 0.25);
+  }
+  
+  .section-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .section-padding {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .section-padding {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+  
+  .heading-xl {
+    font-family: var(--font-bebas), system-ui, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+  }
+  
+  @media (min-width: 640px) {
+    .heading-xl {
+      font-size: 3.75rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .heading-xl {
+      font-size: 4.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .heading-xl {
+      font-size: 6rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .heading-xl {
+      font-size: 8rem;
+    }
+  }
+  
+  .heading-lg {
+    font-family: var(--font-bebas), system-ui, sans-serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+  }
+  
+  @media (min-width: 640px) {
+    .heading-lg {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .heading-lg {
+      font-size: 3.75rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .heading-lg {
+      font-size: 4.5rem;
+    }
+  }
+  
+  .heading-md {
+    font-family: var(--font-bebas), system-ui, sans-serif;
+    font-size: 1.875rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+  }
+  
+  @media (min-width: 640px) {
+    .heading-md {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .heading-md {
+      font-size: 3rem;
+    }
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 2px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+}
